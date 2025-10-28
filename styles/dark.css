@@ -4,9 +4,39 @@
   переключая тему
 */
 
-:root.theme-dark {
+
   /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
+  :root.theme-dark {
+  --page-bg-image: url("../images/cover-image-dark.png");
+  --page-bg-color: #000028;
+}
+
+
+.theme-dark .header__decorative-element {
+  display: block;
+  position: absolute;
+  inset-block-start: 20px;
+  inset-inline-end: 48px;
+  color: var(--accent-color, #FF0070);
+  font-size: var(--font-size, 18px);
+  line-height: 25px;
+}
+
+.theme-dark .header__decorative-element::after {
+  content: "";
+  position: absolute;
+  inset-inline-start: 42px;
+  inset-block-start: 8px;
+  inline-size: 9px;
+  block-size: 9px;
+  border-radius: 50%;
+  background-color: var(--accent-color, #FF0070);
+  box-shadow: 0 0 4px 2px var(--accent-color, #FF0070);
+}
+
+.main__content {
+  background-color: var(--page-bg-color);
 }

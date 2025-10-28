@@ -2,3 +2,25 @@
   Переменные для вашего проекта
   и их переопределение под различные устройства
 */
+
+:root {
+  --accent-color: #ff0070;
+  --title-color: #db00ff;
+  --text-color: #f1b2ce;
+  --article-title-color: #000028;
+  --corners-color: #ff0070;
+  --button-hover: #ff007066;
+  --h2-font-size: 18px;
+  --font-family: 'IBM Plex Mono', monospace;
+  --font-weight-bold: 700;
+  --section-title-color: #ff0070;
+}
+
+:root.theme-light {
+  --accent-color: #ff8dcb;
+  --title-color: #ffc2e6;
+  --text-color: #353430;
+  --article-title-color: #353430;
+  --corners-color: #353430;
+  --button-hover: #32312d66;
+}
