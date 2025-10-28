@@ -3,13 +3,15 @@
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
 
-  font-family: var(--font-family);
+  font-family: var(--font-family, "IBM Plex Mono", monospace);
   background-image: var(--page-bg-image);
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
   background-color: var(--page-bg-color);
   background-repeat: no-repeat;
+  min-height: 668px;
+  color: var(--text-color);
 }
 
 .header {
@@ -17,31 +19,40 @@
   display: grid;
   grid-template-rows: 1fr min-content 1fr;
   align-items: center;
-  padding: 20px;
+  padding: 0;
   block-size: 100vh;
   min-block-size: 668px;
+}
+
+.decorated-zone {
+  position: relative;
 }
 
 .header__decorative-element {
   display: block;
   position: absolute;
-  inset-block-start: 20px;
-  inset-inline-end: 48px;
-  color: var(--accent-color, #ff0070);
-  font-size: var(--font-size, 18px);
+  inset-block-start: 10px;
+  inset-inline-end: 38px;
+  text-align: center;
+  font-family: IBM Plex Mono, monospace;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
   line-height: 25px;
+  position: absolute;
+  top: 20px;
+  right: 50px;
 }
 
-.header__decorative-element::after {
-  content: "";
-  position: absolute;
-  inset-inline-start: 42px;
-  inset-block-start: 8px;
-  inline-size: 9px;
-  block-size: 9px;
-  border-radius: 50%;
-  background-color: var(--accent-color);
-  box-shadow: 0 0 4px 2px var(--accent-color);
+.header__theme-menu {
+  justify-items: end;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: var(--accent-color);
 }
 
 .header__title {
@@ -82,26 +93,13 @@
   margin: 0;
 }
 
-.header__theme-menu {
-  justify-self: center;
-  align-self: start;
-}
-
-.header__theme-menu-list {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-}
-
 .header__theme-menu-button {
   border: 1px solid transparent;
   background: transparent;
   color: var(--accent-color, #ff0070);
   text-transform: lowercase;
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 18px;
+  font-family: var(--font-family);
+  font-size: var(--font-size-main);
   line-height: 1;
   cursor: pointer;
   padding: 2px 13px;
@@ -133,15 +131,15 @@
 }
 
 .decorated-zone::before {
-  border-inline-end: 1px solid var(--corners-color, #ff0070);
-  border-block-start: 1px solid var(--corners-color, #ff0070);
-  inset-inline-end: 20px;
-  inset-block-start: 20px;
+  border-block-end: 1px solid var(--corners-color, #ff0070);
+  border-inline-start: 1px solid var(--corners-color, #ff0070);
+  inset-inline-start: 20px;
+  inset-block-end: 20px;
 }
 
 .decorated-zone::after {
-  border-inline-start: 1px solid var(--corners-color, #ff0070);
   border-block-end: 1px solid var(--corners-color, #ff0070);
+  border-inline-start: 1px solid var(--corners-color, #ff0070);
   inset-inline-start: 20px;
   inset-block-end: 20px;
 }
@@ -149,7 +147,7 @@
 /* ===== MAIN ===== */
 .main__content {
   display: grid;
-   padding: 40px 0;
+  padding: 40px 0;
 }
 
 .section__title,
