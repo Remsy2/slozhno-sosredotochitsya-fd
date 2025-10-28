@@ -4,17 +4,20 @@
 */
 
 :root {
+  --page-bg-image: url("../images/cover-image-dark.png");
+  --page-bg-color: #000028;
   --accent-color: #ff0070;
   --title-color: #db00ff;
   --text-color: #f1b2ce;
   --article-title-color: #000028;
+  --section-title-color: #ff0070;
   --corners-color: #ff0070;
   --button-hover: #ff007066;
-  --h2-font-size: 18px;
   --font-family: "IBM Plex Mono", monospace;
   --font-weight-bold: 700;
-  --section-title-color: #ff0070;
+  --font-size: 18px;
 }
+
 
 :root.theme-light {
   --accent-color: #ff8dcb;

@@ -20,6 +20,11 @@
   --button-hover: #ff007066;
 }
 
+.theme-dark .header__decorative-element {
+  display: block;
+}
+
+
 .theme-dark .header__decorative-element::after {
   content: "";
   position: absolute;

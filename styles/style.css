@@ -14,6 +14,7 @@
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
 
+  font-family: var(--font-family);
   background-image: var(--page-bg-image);
   background-position: center;
   background-size: cover;
@@ -27,20 +28,22 @@
   display: grid;
   grid-template-rows: 1fr min-content 1fr;
   align-items: center;
-  padding: 20px;
+  padding: 10px;
   block-size: 100vh;
   min-block-size: 668px;
 }
 
+
 .header__decorative-element {
   display: block;
   position: absolute;
-  inset-block-start: 20px;
-  inset-inline-end: 48px;
-  color: var(--accent-color, #ff0070);
-  font-size: 18px;
+  inset-block-start: 10px;
+  inset-inline-end: 28px;
+  color: var(--accent-color);
+  font-size: var(--font-size);
   line-height: 25px;
 }
+
 
 .header__decorative-element::after {
   content: "";
@@ -50,29 +53,37 @@
   inline-size: 9px;
   block-size: 9px;
   border-radius: 50%;
-  background-color: var(--accent-color, #ff0070);
-  box-shadow: 0 0 4px 2px var(--accent-color, #ff0070);
+  background-color: var(--accent-color);
+  box-shadow: 0 0 4px 2px var(--accent-color);
 }
+
 
 .header__title {
   justify-self: start;
   align-self: center;
-  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-  font-weight: 700;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  font-weight: var(--font-weight-bold);
   line-height: 82.5%;
-  font-family: "IBM Plex Mono", monospace;
+  font-family: var(--font-family);
   margin: 0;
-  color: var(--title-color, #db00ff);
-  text-shadow: 4px 4px 0 var(--accent-color, #ff0070);
+  color: var(--title-color);
+  text-shadow: 4px 4px 0 var(--accent-color);
+}
+
+
+.header__content {
+  justify-self: end;
+  align-self: center;
+  font-weight: var(--font-weight-bold);
+  font-family: var(--font-family);
 }
 
 .header__text {
-  align-self: end;
-  justify-self: end;
   max-inline-size: 50ch;
   padding: 0;
   margin: 0;
 }
+
 
 .title-decor {
   background-color: var(--accent-color, #ff0070);
