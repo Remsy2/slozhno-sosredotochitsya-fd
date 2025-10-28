@@ -36,15 +36,3 @@
   background-color: var(--accent-color, #ff0070);
   box-shadow: 0 0 4px 2px var(--accent-color, #ff0070);
 }
-
-.theme-dark .header__decorative-element::after {
-  content: "";
-  position: absolute;
-  inset-inline-start: 42px;
-  inset-block-start: 8px;
-  inline-size: 9px;
-  block-size: 9px;
-  border-radius: 50%;
-  background-color: var(--accent-color, #ff0070);
-  box-shadow: 0 0 4px 2px var(--accent-color, #ff0070);
-}

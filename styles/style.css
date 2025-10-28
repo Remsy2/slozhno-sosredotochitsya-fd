@@ -74,8 +74,8 @@
 .header__content {
   justify-self: end;
   align-self: center;
-  font-weight: var(--font-weight-bold);
-  font-family: var(--font-family);
+  font-weight: var(--font-weight-bold, 700);
+  font-family: var(--font-family, "IBM Plex Mono", monospace);
 }
 
 .header__text {
@@ -159,13 +159,7 @@
   inset-block-end: 20px;
 }
 
-.header__content {
-  justify-self: end;
-  align-self: center;
-  font-weight: var(--font-weight-bold, 700);
-  font-family: var(--font-family, "IBM Plex Mono", monospace);
-  inline-size: 491px;
-}
+
 
 /* ===== MAIN ===== */
 .main__content {
