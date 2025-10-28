@@ -23,7 +23,6 @@
   padding: 20px;
   block-size: 100vh;
   min-block-size: 668px;
-  padding: 20px;
 }
 
 .header__title {
@@ -52,6 +51,8 @@
   font-weight: 700;
   font-size: var(--h2-font-size, 18px);
   line-height: 1.3;
+  display: block;
+  padding-inline: 4px;
 }
 
 .header__theme-menu {
@@ -170,10 +171,7 @@
   line-height: 1.3;
 }
 
-.title-decor {
-  display: block;
-  padding-inline: 4px;
-}
+
 
 /* 2. Что снижает концентрацию внимания? */
 .section__concentration-attention .cards {
@@ -271,12 +269,7 @@
   color: var(--article-title-color, #000028);
 }
 
-.header__theme-menu-list {
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-}
+
 
 .footer {
   position: relative;
@@ -294,7 +287,6 @@
   font-weight: 700;
   line-height: 82.5%;
   font-family: var(--font-family, "IBM Plex Mono", monospace);
-  margin-inline-start: -15px;
   color: var(--title-color, #db00ff);
   text-shadow: 4px 4px 0 var(--accent-color, #ff0070);
 }
@@ -310,7 +302,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
   }
 
   .header__title {
