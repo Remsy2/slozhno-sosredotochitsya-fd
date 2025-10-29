@@ -298,17 +298,17 @@ body {
   position: relative;
   display: grid;
   place-items: center;
-  block-size: 100vb;
-  margin: 30px;
+  block-size: 100vh;
+  min-block-size: 668px;
+  padding: 30px;
 }
 
 .footer__title {
-  justify-self: center;
-  align-self: center;
-  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-  font-weight: 700;
-  line-height: 82.5%;
+  margin: 0;
   font-family: var(--font-family, "IBM Plex Mono", monospace);
+  font-weight: var(--font-weight-bold);
+  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  line-height: 1;
   color: var(--title-color, #db00ff);
   text-shadow: 4px 4px 0 var(--accent-color, #ff0070);
 }
@@ -354,8 +354,7 @@ body {
   }
 }
 
-/* На телефонах — чтобы не расползалось */
-@media (max-width: 767px) {
+@media (width <= 375px) {
   .header__theme-menu {
     margin-block-start: 8px;
   }
