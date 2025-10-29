@@ -409,11 +409,11 @@ body {
 
   .subtitle__title,
   .cards .subtitle__title {
-    display: inline-block;
-    padding: 3px 8px;
+    display: block;
+    inline-size: 100%;
+    padding: 4px 8px;
     margin: 0 0 20px 0;
     line-height: 1.1;
-    width: fit-content;
   }
 
   .section__concentrate .subtitle__title {
@@ -433,28 +433,43 @@ body {
     margin-block: 35px;
   }
 
+  .section__concentrate-better {
+    display: grid;
+    grid-template-columns: 230px 1fr;
+    gap: 20px;
+    align-items: start;
+    margin-block-start: -60px;
+  }
+
+  .section__concentrate-better .article {
+    margin-block-start: 30px;
+    margin: px;
+  }
+
+
+
+
   .gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: auto;
-    gap: 20px;
+ 
   }
 
   .gallery__title {
     display: block;
-    padding: 0 8px;
-    margin: 0 0 20px 0;
+    margin: 45px 0 20px 0;
     width: auto;
     position: relative;
   }
 
   .section-gallery {
     display: block;
-    padding: 0 20px;
-    margin-block: -220px;
+    padding: 10 0;
+    margin-block: 0px;
   }
 
   .footer__title {
-    margin-bottom: -520px;
+    margin-bottom: -90px;
   }
 }
