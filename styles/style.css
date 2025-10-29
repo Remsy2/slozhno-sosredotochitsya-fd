@@ -314,6 +314,7 @@ body {
 }
 
 /*==== MEDIA ==== */
+
 @media (width <= 1024px) {
   .header__theme-menu {
     margin-block-start: 20px;
@@ -337,36 +338,98 @@ body {
   }
 }
 
+/* ==== TABLET≤ 768px ==== */
 @media (width <= 768px) {
-  .header__theme-menu {
-    margin-block-start: 14px;
+  .header {
+    padding: 10px 20px 0;
+    min-block-size: 668px;
+    grid-template-rows: 34% min-content 34%;
+    align-items: center;
   }
-  .header .header__title {
-    left: 36px;
-    top: 0;
+  .header__decorative-element {
+    inset-block-start: 20px;
+    inset-inline-end: 25px;
   }
-  .header__content {
-    margin-block-start: 80px;
-  }
-  .header__text.title-decor {
-    max-inline-size: 480px;
-    padding: 6px 8px;
-  }
-}
 
-@media (width <= 375px) {
   .header__theme-menu {
-    margin-block-start: 8px;
+    justify-self: end;
+    align-self: start;
+    margin-block-start: 180px;
+    padding: 0;
   }
+
+  .header__theme-menu-list {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 12px;
+  }
+
   .header .header__title {
-    left: 0;
-    top: 0;
+    position: relative;
+    margin-left: -19px;
+    top: 105px;
+    line-height: 0.825;
+    text-shadow: 4px 4px 0 var(--accent-color);
   }
+
   .header__content {
-    margin-block-start: 16px;
+    grid-row: 3;
+    justify-self: end;
+    align-self: start;
+    margin-block-start: 230px;
   }
+
   .header__text.title-decor {
-    max-inline-size: 100%;
-    padding: 6px 8px;
+    display: inline-block;
+    inline-size: 365px;
+    padding: 10px;
+    margin-inline-start: 175px;
+    margin-block: 50px;
   }
+
+  .main__content {
+    margin-block: 0;
+    padding-block: 20px;
+    row-gap: 0;
+  }
+
+  .section__concentrate {
+    grid-template-columns: 250px 1fr;
+    column-gap: 20px;
+    row-gap: 0;
+  }
+
+  .section__concentration-attention {
+    padding: 0 20px;
+  }
+
+  .section__title {
+    line-height: 1;
+  }
+
+    .subtitle__title,
+  .cards .subtitle__title {
+    display: inline-block;
+    padding: 3px 8px;
+    margin: 0 0 20px 0;
+    line-height: 1.1;
+    width: fit-content;
+  }
+
+  .section__concentrate .subtitle__title {
+    margin: 0 0 20px 0;
+    margin: 0;
+  }
+
+  .section__concentrate-better {
+    grid-template-columns: 236px 1fr;
+    margin-block-start: 45px;
+  }
+
+  .section__concentration-attention .cards {
+    display: grid;
+    column-gap: 20px;
+    grid-template-columns: 1fr;
+  }
+
 }
