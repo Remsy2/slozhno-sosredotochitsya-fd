@@ -1,4 +1,8 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
+body {
+  margin: 0 auto;
+  padding: 0;
+}
 
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
@@ -6,89 +10,35 @@
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
 
   font-family: var(--font-family, "IBM Plex Mono", monospace);
+  font-size: var(--font-size-main, 18px);
   background-image: var(--page-bg-image);
   background-position: center;
   background-size: cover;
-  background-attachment: fixed;
-  background-color: var(--page-bg-color);
   background-repeat: no-repeat;
-  min-height: 668px;
+  background-color: var(--page-bg-color);
+  background-attachment: fixed;
+  line-height: 1.3;
   color: var(--text-color);
-}
-
-.header__title {
-  display: flex;
-  flex-direction: column;
+  overflow-x: hidden;
 }
 
 .header {
   position: relative;
   display: grid;
   grid-template-rows: 1fr min-content 1fr;
-  align-items: center;
   block-size: 100vh;
+  margin-block-end: 40px;
   min-block-size: 668px;
 }
 
-.decorated-zone {
-  position: relative;
-}
-
-.header__decorative-element {
-  position: absolute;
-  top: 20px;
-  right: 48px;
-  color: var(--accent-color);
-  font-size: var(--font-size-main);
-}
-
 .header__theme-menu {
-  justify-items: end;
+  display: grid;
+  justify-content: center;
 }
 
 .header__theme-menu-list {
   display: flex;
-  flex-direction: column;
   gap: 10px;
-  color: var(--accent-color);
-}
-
-.header__title {
-  justify-self: start;
-  align-self: center;
-  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-  font-weight: var(--font-weight-bold, 700);
-  line-height: 82.5%;
-  font-family: var(--font-family);
-  margin: 0;
-  color: var(--title-color);
-  text-shadow: 4px 4px 0 var(--accent-color);
-}
-
-.header__content {
-  justify-self: end;
-  align-self: center;
-  font-weight: var(--font-weight-bold, 700);
-  font-family: var(--font-family, "IBM Plex Mono", monospace);
-  inline-size: 491px;
-  margin-bottom: 55px;
-}
-
-.header__text {
-  max-inline-size: 50ch;
-  padding: 0;
-  margin: 0;
-}
-
-.title-decor {
-  background-color: var(--accent-color, #ff0070);
-  color: var(--article-title-color, #000028);
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 1.3;
-  display: block;
-  padding: 0;
-  margin: 0;
 }
 
 .header__theme-menu-button {
@@ -96,28 +46,83 @@
   background: transparent;
   color: var(--accent-color, #ff0070);
   text-transform: lowercase;
-  font-family: var(--font-family);
-  font-size: var(--font-size-main);
-  line-height: 1;
-  cursor: pointer;
-  padding: 2px 13px;
-  min-inline-size: fit-content;
-}
-
-.header__theme-menu-button_type_dark {
-  border: 1px solid var(--accent-color, #ff0070);
-}
-
-.header__theme-menu-button:focus {
-  outline: none;
+  line-height: 18px;
+  inline-size: 70px;
+  block-size: 23px;
+  padding: 2px 13px 5px;
 }
 
 .header__theme-menu-button:hover {
   border: 1px solid var(--button-hover, #ff007066);
+  color: var(--accent-color);
+}
+
+.header__theme-menu-button:focus {
+  border-block-end: 1px solid var(--accent-color);
 }
 
 .header__theme-menu-button:focus-visible {
   border-block-end: 1px solid var(--accent-color, #ff0070);
+}
+
+.header__theme-menu-button_active {
+  outline: 1px solid var(--accent-color, #ff0070);
+  outline-offset: -1px;
+  pointer-events: none;
+}
+
+.header__title {
+  position: relative;
+  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  font-weight: var(--font-weight-bold, 700);
+  line-height: 82.5%;
+  font-family: var(--font-family, "IBM Plex Mono", monospace);
+  color: var(--title-color);
+  text-shadow: 4px 4px 0 var(--accent-color);
+}
+
+.header .header__title {
+  position: relative;
+  left: -20px;
+  top: -7px;
+}
+
+.header__content {
+  justify-self: end;
+  align-self: center;
+  font-weight: var(--font-weight-bold, 700);
+  font-family: var(--font-family, "IBM Plex Mono", monospace);
+  inline-size: 50ch;
+  margin-block-start: 108px;
+}
+
+.title-decor {
+  background-color: var(--accent-color, #ff0070);
+  color: var(--article-title-color, #000028);
+  font-weight: var(--font-weight-bold, 700);
+  font-size: var(--font-size-main);
+}
+
+.header__decorative-element {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  top: 20px;
+  right: 29px;
+  color: var(--accent-color, #ff0070);
+  font-size: var(--font-size-main, 18px);
+  text-transform: uppercase;
+}
+
+.header__decorative-element::after {
+  content: "";
+  display: inline-block;
+  inline-size: 9px;
+  block-size: 9px;
+  border-radius: 50%;
+  margin-inline-start: 10px;
+  background-color: var(--accent-color);
+  box-shadow: 0 0 4px 2px var(--accent-color);
 }
 
 .decorated-zone::before,
@@ -131,72 +136,76 @@
 .decorated-zone::before {
   border-block-end: 1px solid var(--corners-color, #ff0070);
   border-inline-start: 1px solid var(--corners-color, #ff0070);
-  inset-inline-start: 20px;
   inset-block-end: 20px;
+  inset-inline-start: 20px;
 }
 
 .decorated-zone::after {
-  border-block-end: 1px solid var(--corners-color, #ff0070);
-  border-inline-start: 1px solid var(--corners-color, #ff0070);
-  inset-inline-start: 20px;
-  inset-block-end: 20px;
-}
-
-.header__decorative-element::after {
-  content: '';
-  position: absolute;
-  top: 8px;
-  right: -20px;
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
-  background-color: var(--accent-color);
-  box-shadow: 0 0 4px 2px var(--accent-color);
+  border-block-start: 1px solid var(--corners-color, #ff0070);
+  border-inline-end: 1px solid var(--corners-color, #ff0070);
+  inset-block-start: 20px;
+  inset-inline-end: 20px;
 }
 
 /* ===== MAIN ===== */
 .main__content {
   display: grid;
-  grid-template-columns: repeat(315px, 1fr);
-  margin-top: 40px;
-  padding: 18px 17px;
-}
-
-
-.title-decor {
-  background-color: var(--accent-color);
-  color: var(--article-title-color);
-  font-weight: var(--font-weight-bold);
-  font-size: var(--font-size-main);
-}
-
-.section__title,
-.article__text,
-.card__text {
-  font-family: var(--font-family, "IBM Plex Mono", monospace);
-  font-size: var(--h2-font-size, 18px);
-}
-
-.article__text,
-.card__text {
-  margin-top: 45px;
-}
-
-.section {
-  display: grid;
+  grid-template-rows: 1fr auto;
+  margin-block-end: 60px;
   gap: 20px;
 }
 
+.section__title {
+  color: var(--accent-color, #ff0070);
+  font-size: var(--font-size-main, 18px);
+  font-weight: var(--font-weight-bold, 700);
+  line-height: 1.3;
+  margin-block-end: 10px;
+}
+
+.section__title.title-decor {
+  color: var(--article-title-color, #000028);
+}
+
+.article__text {
+  margin-block-start: 20px;
+}
+
 /* 1. Почему сосредоточиться так сложно */
+
 .section__concentrate {
   display: grid;
   grid-template-columns: 315px 1fr;
   gap: 20px;
 }
 
+.subtitle__title {
+  display: block;
+  padding: 4px 8px;
+  margin: 0 0 20px 0;
+  margin-block-end: 0;
+  font-weight: var(--font-weight-bold, 700);
+  font-size: var(--font-size-main, 18px);
+}
+
 .section__content {
   display: flex;
   flex-direction: column;
+  gap: 20px;
+}
+
+/* 2. Что снижает концентрацию внимания? */
+.section__concentration-attention .cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 20px;
+  row-gap: 20px;
+  align-items: start;
+  margin-block-start: 20px;
+}
+
+.card {
+  display: grid;
   gap: 20px;
 }
 
@@ -206,23 +215,8 @@
   gap: 20px;
 }
 
-.section__title {
-  color: var(--section-title-color, #ff0070);
-  font-weight: var(--font-weight-bold, 700);
-  line-height: 1.3;
-}
-
-/* 2. Что снижает концентрацию внимания? */
-.section__concentration-attention .cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  align-items: start;
-}
-
-.card {
-  display: grid;
-  gap: 40px;
+.section__concentration-attention .subtitle__title {
+  margin-block-start: 20px;
 }
 
 /* 3. Как концентрироваться лучше */
@@ -231,31 +225,41 @@
   grid-template-columns: 315px 1fr;
   gap: 20px;
   align-items: start;
+  margin-block-start: 40px;
+}
+
+.section__concentrate-better .article {
+  margin-block-start: 30px;
+  margin: 26px;
 }
 
 .article__subtitle {
   margin-top: 10px;
 }
 
-
 .title__text {
-  padding: 20px;
+  padding: 25px 20px;
 }
-
 
 /* ===== GALLERY ===== */
-.section-gallery {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  padding:  0;
-}
-
 .gallery {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, auto);
-  padding: 20px 0;
+  grid-auto-rows: auto;
+  gap: 20px;
+}
+
+.gallery__title {
+  display: block;
+  padding: 0 8px;
+  margin: 0 0 20px 0;
+  width: auto;
+  position: relative;
+}
+
+.section-gallery {
+  display: block;
+  padding: 0 20px;
 }
 
 .gallery__item {
@@ -290,10 +294,6 @@
   grid-row: 3;
 }
 
-.section-gallery .section__title.title-decor {
-  color: var(--article-title-color, #000028);
-}
-
 .footer {
   position: relative;
   display: grid;
@@ -313,284 +313,61 @@
   text-shadow: 4px 4px 0 var(--accent-color, #ff0070);
 }
 
-/*==== MEDIA ==== 
-@media (width >= 1024px) {
+/*==== MEDIA ==== */
+@media (width <= 1024px) {
   .header__theme-menu {
-    justify-self: center;
-    align-self: start;
+    margin-block-start: 20px;
   }
 
-  .header__theme-menu-list {
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-  }
-
-  .header__title {
-    text-shadow: 4px 4px 0 var(--accent-color);
-    margin-inline-start: -15px;
-    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-  }
-
-
-  .header__text {
-    margin: 50px;
-  }
-
-
-  .header__decorative-element {
-    inset-block-start: 20px;
-    inset-inline-end: 48px;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1023px) and (max-height: 668px) {
-  .header__theme-menu {
-    justify-self: end;
-    align-self: start;
-  }
-
-  .header__theme-menu-list {
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 12px;
-  }
-
-  .section__concentrate,
-  .section__concentrate-better {
-    grid-template-columns: 1fr 2fr;
-  }
-
-  .cards {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* === 768px === 
-
-@media (width => 768px) {
-  .header__title {
-    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-  }
-
-  .header__theme-menu {
-    justify-self: end;
-    align-self: start;
-  }
-
-  .header__theme-menu-list {
-    flex-direction: column;
-    align-items: flex-end;
-  }
-
-
-
-  .section__concentrate,
-  .section__concentrate-better {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  .cards {
-    grid-template-columns: 1fr;
-  }
-
-  .main__content {
-    padding: 30px 20px;
-  }
-
-  .gallery {
-    grid-template-columns: 1fr;
-    grid-auto-rows: auto;
-    gap: 10px;
-  }
-
-  .gallery__item {
-    grid-column: auto;
-    grid-row: auto;
-  }
-
-  .footer {
-    align-items: center;
-    align-self: center;
-    padding: 20px;
-  }
-
-  .footer__title {
-    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-  }
-}
-
-*/
-
-/* === 768px - 1024px (Tablet) === */
-@media (min-width: 768px) and (max-width: 1024px) {
-  .header {
-    padding: 20px;
-  }
-
-  .header__title {
-    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-    margin-inline-start: -10px;
+  .header .header__title {
+    left: 0;
+    top: 0;
   }
 
   .header__content {
-    inline-size: 364px;
-    margin-bottom: 30px;
+    margin-block-start: 0;
   }
 
-  .main__content {
-    padding: 60px 20px;
-    gap: 80px;
-  }
-
-  .section__concentrate,
-  .section__concentrate-better {
-    grid-template-columns: 1fr 2fr;
-    gap: 20px;
-  }
-
-  .section__concentration-attention .cards {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-  }
-
-  .section-gallery {
-    padding: 60px 20px;
-  }
-
-  .gallery {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, auto);
-    grid-template-areas:
-      "sunset sunset ice-cream"
-      "tape books ice-cream"
-      "tape street street";
-    gap: 20px;
-  }
-
-  .gallery__sunset { grid-area: sunset; }
-  .gallery__ice-cream { grid-area: ice-cream; }
-  .gallery__tape { grid-area: tape; }
-  .gallery__books { grid-area: books; }
-  .gallery__street { grid-area: street; }
-
-  .footer {
-    padding: 20px;
-  }
-
-  .footer__title {
-    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  .header__text.title-decor {
+    display: inline-block;
+    max-inline-size: 480px;
+    max-block-size: 90px;
+    line-height: 1;
+    margin-left: 35px;
   }
 }
 
-/* === 375px - 667px (Mobile) === */
+@media (width <= 768px) {
+  .header__theme-menu {
+    margin-block-start: 14px;
+  }
+  .header .header__title {
+    left: 36px;
+    top: 0;
+  }
+  .header__content {
+    margin-block-start: 80px;
+  }
+  .header__text.title-decor {
+    max-inline-size: 480px;
+    padding: 6px 8px;
+  }
+}
+
+/* На телефонах — чтобы не расползалось */
 @media (max-width: 767px) {
-  .header {
-    padding: 10px;
-    min-block-size: 668px;
-  }
-
-  .header__decorative-element {
-    top: 10px;
-    right: 38px;
-  }
-
   .header__theme-menu {
-    justify-self: end;
-    align-self: start;
+    margin-block-start: 8px;
   }
-
-  .header__theme-menu-list {
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 12px;
+  .header .header__title {
+    left: 0;
+    top: 0;
   }
-
-  .header__title {
-    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-    margin-inline-start: 0;
-    text-shadow: 4px 4px 0 var(--accent-color);
-  }
-
   .header__content {
-    inline-size: 100%;
+    margin-block-start: 16px;
+  }
+  .header__text.title-decor {
     max-inline-size: 100%;
-    margin-bottom: 30px;
-  }
-
-  .main__content {
-    padding: 40px 10px;
-    gap: 50px;
-  }
-
-  .section__concentrate,
-  .section__concentrate-better {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  .section__concentration-attention .cards {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  .card {
-    gap: 10px;
-  }
-
-  .section-gallery {
-    padding: 40px 10px;
-    gap: 10px;
-  }
-
-  .gallery {
-    grid-template-columns: 1fr;
-    grid-auto-rows: auto;
-    gap: 10px;
-    padding: 10px 0;
-  }
-
-  .gallery__item {
-    grid-column: auto;
-    grid-row: auto;
-  }
-
-  .footer {
-    padding: 10px;
-    min-block-size: 668px;
-  }
-
-  .footer__title {
-    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-  }
-
-  .decorated-zone::before {
-    inset-inline-start: 10px;
-    inset-block-end: 10px;
-  }
-
-  .decorated-zone::after {
-    inset-inline-start: auto;
-    inset-inline-end: 10px;
-    inset-block-start: 10px;
-    inset-block-end: auto;
-    border-block-end: none;
-    border-inline-start: none;
-    border-block-start: 1px solid var(--corners-color, #ff0070);
-    border-inline-end: 1px solid var(--corners-color, #ff0070);
-  }
-}
-
-/* === Fix for very small mobile screens === */
-@media (max-width: 374px) {
-  .header__title,
-  .footer__title {
-    font-size: clamp(5rem, 4rem + 5vw, 6rem);
-  }
-  
-  .header__content {
-    inline-size: 100%;
+    padding: 6px 8px;
   }
 }
