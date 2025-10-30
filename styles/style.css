@@ -448,7 +448,6 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: auto;
- 
   }
 
   .gallery__title {
@@ -469,10 +468,8 @@ body {
   }
 }
 
-
-
 /* ==== PHONE ≤ 375px ==== */
-@media (max-width: 375px) {
+@media (width <= 375px) {
   .page {
     min-inline-size: 375px;
     max-inline-size: 668px;
@@ -500,8 +497,14 @@ body {
     box-shadow: 0 0 4px 2px var(--accent-color);
   }
 
-  .decorated-zone::before { inset-block-end: 10px; inset-inline-start: 10px; }
-  .decorated-zone::after  { inset-block-start: 10px; inset-inline-end: 10px; }
+  .decorated-zone::before {
+    inset-block-end: 10px;
+    inset-inline-start: 10px;
+  }
+  .decorated-zone::after {
+    inset-block-start: 10px;
+    inset-inline-end: 10px;
+  }
 
   .header__theme-menu {
     justify-self: end;
@@ -539,6 +542,4 @@ body {
   }
 }
 
-
-  /* === SECTION II PHONE ≤ 375px === */
-  
+/* === SECTION II PHONE ≤ 375px === */
