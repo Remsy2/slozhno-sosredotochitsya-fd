@@ -14,6 +14,7 @@
   --accent-color: #ff0070;
   --title-color: #db00ff;
   --text-color: #f1b2ce;
+  --theme-menu-color: #ff0070;
   --article-title-color: #000028;
   --section-title-color: #ff0070;
   --corners-color: #ff0070;
@@ -34,6 +35,7 @@
   :root {
     --page-bg-image: url("../images/cover-image-dark.png");
     --page-bg-color: #000028;
+    --theme-menu-color: #ff0070;
     --accent-color: #ff0070;
     --title-color: #db00ff;
     --text-color: #f1b2ce;
