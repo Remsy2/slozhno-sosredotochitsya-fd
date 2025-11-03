@@ -419,16 +419,6 @@ card__link:hover {
     gap: 20px;
   }
 
-  .section__title {
-    inline-size: 1fr;
-  }
-
-  .section__concentrate,
-  .section__concentrate-better {
-    grid-template-columns: 356px;
-    gap: 20px;
-  }
-
   .section__concentration-attention {
     margin-top: 50px;
     line-height: 1.3;
