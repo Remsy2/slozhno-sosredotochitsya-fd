@@ -19,8 +19,20 @@
   --section-title-color: #353430;
   --corners-color: #353430;
   --button-hover: #353430;
+  --text-color-button: #353430;
 }
 
+.theme-light .header__decorative-element {
+  display: none;
+}
+
+.theme-light .header__theme-menu-button:focus-visible {
+  border-block-end-color: #353430;
+}
+
+.theme-light .header__theme-menu-button_active {
+  outline-color: #353430;
+}
 
 @media (prefers-color-scheme: light) {
   :root {
@@ -34,5 +46,19 @@
     --section-title-color: #353430;
     --corners-color: #353430;
     --button-hover: #353430;
+    --text-color-button: #353430;
   }
+
+  .header__decorative-element {
+    display: none;
+  }
+
+  .header__theme-menu-button:focus-visible {
+    border-block-end-color: var(--theme-menu-color);
+  }
+
+   .header__theme-menu-button_active {
+    outline-color: var(--button-hover);
+  }
+ 
 }

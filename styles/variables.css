@@ -17,4 +17,9 @@
   --font-family: "IBM Plex Mono", monospace;
   --font-weight-bold: 700;
   --font-size-main: 18px;
+  --text-color-button: #ff0070;
+
+  --title-font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  --title-font-size-mobile: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  --padding-base: clamp(10px, 4.13px + 1.56vw, 20px);
 }
