@@ -1,1 +1,0 @@
-https://github.com/Remsy2/slozhno-sosredotochitsya-fd

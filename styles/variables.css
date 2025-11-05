@@ -13,11 +13,13 @@
   --article-title-color: #000028;
   --section-title-color: #ff0070;
   --corners-color: #ff0070;
-  --button-hover: #ff007066;
+  --button-hover: rgba(255, 0, 112, 0.4);
   --font-family: "IBM Plex Mono", monospace;
   --font-weight-bold: 700;
   --font-size-main: 18px;
   --text-color-button: #ff0070;
+  --border-block-end-color: #ff0070;
+  --outline-color: #353430;
 
   --title-font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   --title-font-size-mobile: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);

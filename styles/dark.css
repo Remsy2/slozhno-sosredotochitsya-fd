@@ -18,11 +18,14 @@
   --article-title-color: #000028;
   --section-title-color: #ff0070;
   --corners-color: #ff0070;
-  --button-hover: #ff007066;
+  --button-hover: rgba(255, 0, 112, 0.4);
   --text-color-button: #ff0070;
+  --border-block-end-color: rgba(255, 0, 112, 0.4);
+  --outline-color: #ff0070;
 }
 
 .theme-dark .header__decorative-element {
   display: block;
   color: var(--accent-color);
+  border-block-end-color: #353430;
 }
