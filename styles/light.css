@@ -18,9 +18,9 @@
   --article-title-color: #353430;
   --section-title-color: #353430;
   --corners-color: #353430;
-  --button-hover: #353430;
+  --button-hover: rgba(50, 49, 45, 0.4);
   --text-color-button: #353430;
-  --border-block-end-color: rgba(50, 49, 45, 0.4);
+  --border-block-end-color: #353430;
   --outline-color: #353430;
 }
 
@@ -41,7 +41,7 @@
     --corners-color: #353430;
     --button-hover: rgba(50, 49, 45, 0.4);
     --text-color-button: #353430;
-    --border-block-end-color: rgba(50, 49, 45, 0.4);
+    --border-block-end-color: #353430;
     --outline-color: #353430;
   }
 

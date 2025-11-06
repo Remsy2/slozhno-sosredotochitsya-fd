@@ -20,12 +20,11 @@
   --corners-color: #ff0070;
   --button-hover: rgba(255, 0, 112, 0.4);
   --text-color-button: #ff0070;
-  --border-block-end-color: rgba(255, 0, 112, 0.4);
+  --border-block-end-color: #ff0070;
   --outline-color: #ff0070;
 }
 
 .theme-dark .header__decorative-element {
   display: block;
   color: var(--accent-color);
-  border-block-end-color: #353430;
 }
